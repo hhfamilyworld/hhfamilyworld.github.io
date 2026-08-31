@@ -95,13 +95,16 @@
     .app-icon {
       width: 64px;
       height: 64px;
-      background: linear-gradient(135deg, #007aff, #00c6ff);
       border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
+      overflow: hidden;
       flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .app-info { flex: 1; }
@@ -196,7 +199,9 @@
   <section class="apps">
     <h3>Apps</h3>
     <div class="app-card">
-      <div class="app-icon">📷</div>
+      <div class="app-icon">
+        <img src="app_icon.webp" alt="QR Scanner icon" />
+      </div>
       <div class="app-info">
         <h4>QR Scanner — QR Code Reader</h4>
         <p>Fast and intuitive QR code &amp; barcode scanner.<br>
